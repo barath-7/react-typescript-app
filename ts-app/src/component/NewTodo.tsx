@@ -4,7 +4,7 @@ const NewTodo = () => {
     let inputRef = useRef()
     const formSubmissionHandler = (event:React.FormEvent) =>{
         event.preventDefault()
-        inputRef = event
+        //inputRef = event
     }
   return (
     <form onSubmit={formSubmissionHandler} ref={inputRef}>
