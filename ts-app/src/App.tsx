@@ -18,10 +18,15 @@ const [todos, setTodos] = useState<Todos[]>([])
       return prev.concat(newTodo)
     })
   }
+  const removeTodoHandler =(todoId:string) =>{
+    setTodos((prev)=>{
+      return prev.filter(todo=>todo.id !== todoId)
+    })
+  }
   return (
     <div className="App">
       {/* <Todo>hello</Todo> */}
-      <Todo items={todos}/>
+      <Todo items={todos} onRemoveTodo={removeTodoHandler}/>
       <NewTodo onAddTodo={addTodoHandler} />
     </div>
   );

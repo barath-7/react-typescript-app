@@ -10,7 +10,6 @@ const NewTodo:React.FC<{onAddTodo:(text:string)=>void}> = (props) => {
       //console.log(enteredText)
 
       props.onAddTodo(enteredText)
-  enteredText=''
     }
   return (
     <form onSubmit={formSubmissionHandler} className={classes.form}>
